@@ -116,31 +116,41 @@ body{background:#060606;min-height:100vh;}
   .er{max-width:100%;}
   .ft{padding:10px 16px 18px;}
   .ft-t{font-size:9px;letter-spacing:2px;}
-  /* Vấn đề 1 */
-  .mobile-break{display:block !important;text-align:center;font-style:italic;}
-  .mobile-sub{display:block !important;text-align:center;font-style:italic;}
-  .desktop-only{display:none !important;}
-  /* Vấn đề 2 */
-  .mobile-block{display:block !important;text-align:center;}
-  /* Vấn đề 3 */
-  .mobile-only-ft{display:block !important;text-align:center;line-height:1.8;}
+  .d-title-vi{display:block !important;font-style:italic;}
+  .d-sub-vi{display:block !important;font-style:italic;}
+  .d-desktop-vi{display:none !important;}
+  .ft-mob{display:block !important;text-align:center;line-height:2;}
+  .ft-desk{display:none !important;}
+  .mob-br{display:inline !important;}
+  
+  
+  
+  
+  
+  
+  
+  
 
 }
 
 .pt{position:absolute;width:2px;height:2px;background:#C9952A;border-radius:50%;opacity:0;animation:fu 7s infinite;}
 @keyframes fu{0%{opacity:0;transform:translateY(0);}20%{opacity:0.25;}80%{opacity:0.04;}100%{opacity:0;transform:translateY(-90px);}}
 
-.mobile-break{display:none;}
-.mobile-sub{display:none;}
-.desktop-only{display:inline;}
-.mobile-block{display:inline;}
-.mobile-only-ft{display:none;}
 
-.mobile-break{display:none !important;}
-.mobile-sub{display:none !important;}
-.mobile-block{display:inline !important;}
-.mobile-only-ft{display:none !important;}
-.desktop-only{display:inline !important;}
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop: ẩn mobile elements */
+.d-title-vi,.d-sub-vi,.ft-mob,.mob-br{display:none;}
+.d-desktop-vi,.ft-desk{display:inline;}
 </style>
 <script>
 window.addEventListener('load',function(){
@@ -203,14 +213,14 @@ window.addEventListener('load',function(){
   <div class="bh"></div>
 
   <div class="hero">
-    <span class="d bright"><span class="mobile-break">GEMS MUSIC</span><span class="mobile-sub">Nơi âm nhạc đưa bạn vào những giấc mơ bất tận</span><span class="desktop-only">GEMS MUSIC – Nơi âm nhạc đưa bạn vào những giấc mơ bất tận</span></span>
+    <span class="d bright d-title-vi">GEMS MUSIC</span><span class="d bright d-sub-vi">Nơi âm nhạc đưa bạn vào những giấc mơ bất tận</span><span class="d bright d-desktop-vi">GEMS MUSIC – Nơi âm nhạc đưa bạn vào những giấc mơ bất tận</span><span class="mobile-sub">Nơi âm nhạc đưa bạn vào những giấc mơ bất tận</span><span class="desktop-only">GEMS MUSIC – Nơi âm nhạc đưa bạn vào những giấc mơ bất tận</span></span>
     <div class="genre">Art Song &nbsp;·&nbsp; Cinematic &nbsp;·&nbsp; Atmospheric</div>
     <span class="d mid">Dòng âm nhạc đi giữa ranh giới rất đời nhưng cũng rất mơ — trần trụi và thiêng liêng</span>
     <span class="d mid">Hãy cùng trải nghiệm những trạng thái loài người qua dòng chảy của âm nhạc</span>
     <div style="margin:20px 0;border-top:1px solid #1A1200;max-width:320px;margin:20px auto;"></div>
     <span class="d bright">GEMS MUSIC – where music leads you into endless dreams</span>
     <div class="genre">Art Song &nbsp;·&nbsp; Cinematic &nbsp;·&nbsp; Atmospheric</div>
-    <span class="d soft">Music that moves between the earthly and the dreamlike —<span class="mobile-br"> </span><span class="mobile-block">raw and sacred</span></span>
+    <span class="d soft">Music that moves between the earthly and the dreamlike —<span class="mob-br"><br></span> raw and sacred</span>
     <span class="d soft">Experience states of being through the flow of music</span>
   </div>
 
@@ -234,7 +244,7 @@ window.addEventListener('load',function(){
   </div>
 
   <div class="bh dim"></div>
-  <div class="ft"><div class="ft-t"><span class="desktop-only">© 2026 &nbsp;GEMS MUSIC &nbsp;·&nbsp; gemsmusic.global &nbsp;·&nbsp; All Rights Reserved</span><span class="mobile-only-ft">© 2026 GEMS MUSIC · gemsmusic.global<br>All Rights Reserved</span></div></div>#169; 2026 &nbsp;GEMS MUSIC &nbsp;&nbsp;·&nbsp;&nbsp; gemsmusic.global &nbsp;&nbsp;·&nbsp;&nbsp; All Rights Reserved</div>
+  <div class="ft"><div class="ft-t"><span class="ft-desk">© 2026 &nbsp;GEMS MUSIC &nbsp;·&nbsp; gemsmusic.global &nbsp;·&nbsp; All Rights Reserved</span><span class="ft-mob">© 2026 GEMS MUSIC · gemsmusic.global<br>All Rights Reserved</span></div></div>
   <div class="bh"></div>
 </div>
 <script>
