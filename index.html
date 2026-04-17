@@ -68,12 +68,12 @@ body{background:#000000;min-height:100vh;}
 }
 
 /* Hero */
-.hero{padding:24px 0 22px;text-align:center;max-width:640px;margin:22px auto 0;}
+.hero{padding:24px 0 22px;text-align:center;max-width:640px;margin:25px auto 0;}
 .d{font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;line-height:2;letter-spacing:0.5px;display:block;}
-.d.bright{color:#D4A843;font-size:16px;}
-.d.mid{color:#C9952A;font-size:16px;}
-.d.soft{color:#C9952A;font-size:16px;}
-.genre{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:500;letter-spacing:5px;color:#8B6914;margin:10px 0;text-transform:uppercase;}
+.d.bright{color:#D4A843;font-size:18px;}
+.d.mid{color:#C9952A;font-size:18px;}
+.d.soft{color:#C9952A;font-size:18px;}
+.genre{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:500;letter-spacing:5px;color:#8B6914;margin:10px 0;text-transform:uppercase;}
 
 /* Desktop: ẩn mobile elements */
 .desktop-vi{display:inline;}
@@ -162,7 +162,8 @@ body{background:#000000;min-height:100vh;}
   .gs-main{color:#D4A843 !important;font-size:12px !important;}
 
   .ls::before{content:'';position:absolute;top:0;left:0;right:0;height:35%;background:linear-gradient(to bottom,#060606 0%,rgba(6,6,6,0.7) 40%,rgba(6,6,6,0.2) 75%,transparent 100%);z-index:1;pointer-events:none;}
-.ls::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25);z-index:0;pointer-events:none;}
+.ls::before{content:'';position:absolute;top:0;left:0;right:0;height:6%;background:linear-gradient(to bottom,rgba(0,0,0,0.92) 0%,transparent 100%);z-index:1;pointer-events:none;}
+  .ls::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.25);z-index:0;pointer-events:none;}
 
   .ft{padding:10px 16px 18px;}
   .ft-t{font-size:9px;letter-spacing:2px;}
@@ -287,7 +288,7 @@ for(let i=0;i<66;i++){
   const p=document.createElement('div');p.className='pt';
   p.textContent=notes[Math.floor(Math.random()*notes.length)];
   const rot=(Math.random()*60-30);
-  p.style.cssText='left:'+(1+Math.random()*98)+'%;bottom:'+(3+Math.random()*65)+'%;animation-delay:'+(Math.random()*8)+'s;animation-duration:'+(4+Math.random()*5)+'s;transform:rotate('+rot+'deg);font-size:'+(9+Math.random()*6)+'px;';
+  p.style.cssText='left:'+(1+Math.random()*98)+'%;bottom:'+(3+Math.random()*65)+'%;animation-delay:'+(Math.random()*8)+'s;animation-duration:'+(6+Math.random()*3.6)+'s;transform:rotate('+rot+'deg);font-size:'+(9+Math.random()*6)+'px;';
   r.appendChild(p);
 }
 </script>
