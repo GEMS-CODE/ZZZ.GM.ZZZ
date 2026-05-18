@@ -76,7 +76,7 @@ function drawFairy(){
   const wobY=Math.sin(fairy.wobble*0.7)*2;
   const flip=fairy.vx<-0.1?-1:1;
 
-  const glowR=1600;
+  const glowR=2600;
   const glow=ctx.createRadialGradient(fairy.x,fairy.y,50,fairy.x,fairy.y,glowR);
   glow.addColorStop(0,'rgba(201,149,42,0.033)');
   glow.addColorStop(0.3,'rgba(201,149,42,0.015)');
