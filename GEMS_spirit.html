@@ -242,7 +242,7 @@ function updateTrail(){
     trail.push({x:fairy.x,y:fairy.y,life:1});
   }
   if(trail.length>26)trail.shift();
-  trail.forEach(p=>p.life-=0.006);
+  trail.forEach(p=>p.life-=0.002);
 }
 function drawTrail(){
   trail.forEach(p=>{
