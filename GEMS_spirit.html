@@ -73,7 +73,7 @@ function drawFairyGlow(){
   const wobX=Math.sin(fairy.wobble)*3;
   const wobY=Math.sin(fairy.wobble*0.7)*2;
   const cx=fairy.x+wobX, cy=fairy.y+wobY;
-  const glowR=360;
+  const glowR=160;
   const glow=ctx.createRadialGradient(cx,cy,30,cx,cy,glowR);
   glow.addColorStop(0,'rgba(201,149,42,0.15)');
   glow.addColorStop(0.4,'rgba(201,149,42,0.06)');
@@ -248,7 +248,7 @@ function drawTrail(){
   trail.forEach(p=>{
     if(p.life<0)return;
 
-    const r=p.life*35+5;        // life=1→48px, life=0→8px
+    const r=p.life*36+10;        // life=1→48px, life=0→8px
     const a=p.life*0.05;        // life=1→0.05, life=0→0
     const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,r);
     g.addColorStop(0,`rgba(201,149,42,${a})`);
