@@ -75,19 +75,23 @@ function drawFairy(){
   const wobX=Math.sin(fairy.wobble)*3;
   const wobY=Math.sin(fairy.wobble*0.7)*2;
   const flip=fairy.vx<-0.1?-1:1;
+ctx.save();
+ctx.translate(fairy.x+wobX,fairy.y+wobY);
+ctx.scale(flip*S,S);
 
-  const glowR=2600;
-  const glow=ctx.createRadialGradient(fairy.x,fairy.y,50,fairy.x,fairy.y,glowR);
+  ctx.save();
+  
+  const glowR=5000; 
+  const glow=ctx.createRadialGradient(0,0,50,0,0,glowR);
   glow.addColorStop(0,'rgba(201,149,42,0.033)');
   glow.addColorStop(0.3,'rgba(201,149,42,0.015)');
   glow.addColorStop(1,'rgba(0,0,0,0)');
   ctx.fillStyle=glow;
-  ctx.beginPath();ctx.arc(fairy.x,fairy.y,glowR,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.arc(0,0,glowR,0,Math.PI*2);ctx.fill();
+  ctx.restore();
 
-  ctx.save();
-  ctx.translate(fairy.x+wobX,fairy.y+wobY);
-  ctx.scale(flip*S,S);
-  ctx.drawImage(fairyImg,-2666,-1500,5331,3000);
+ctx.drawImage(fairyImg, -2666, -1500, 5331, 3000);
+
   ctx.restore();
 }
 
