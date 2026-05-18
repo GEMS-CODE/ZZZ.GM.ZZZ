@@ -40,7 +40,7 @@ function drawDust(t){
   });
 }
 
-const VB={x:436.1558,y:118.4521,w:1796.7554,h:3088.873};
+
 
 
 const fairy={
@@ -75,16 +75,12 @@ function drawFairy(){
   const wobX=Math.sin(fairy.wobble)*3;
   const wobY=Math.sin(fairy.wobble*0.7)*2;
   const flip=fairy.vx<-0.1?-1:1;
-  const svgCX=VB.x+VB.w/2;
-  const svgCY=VB.y+VB.h*0.35;
+ctx.save();
+ctx.translate(fairy.x+wobX,fairy.y+wobY);
+ctx.scale(flip*S,S);
 
   ctx.save();
-  ctx.translate(fairy.x+wobX,fairy.y+wobY);
-  ctx.scale(flip*S,S);
-  ctx.translate(-svgCX,-svgCY);
-
-  ctx.save();
-  ctx.translate(svgCX,svgCY);
+  
   const glowR=5000; 
   const glow=ctx.createRadialGradient(0,0,50,0,0,glowR);
   glow.addColorStop(0,'rgba(201,149,42,0.033)');
@@ -94,7 +90,7 @@ function drawFairy(){
   ctx.beginPath();ctx.arc(0,0,glowR,0,Math.PI*2);ctx.fill();
   ctx.restore();
 
-ctx.drawImage(fairyImg, -1415, -1415, 2830, 2830);
+ctx.drawImage(fairyImg, -1628, -914, 3255, 1828);
 
   ctx.restore();
 }
