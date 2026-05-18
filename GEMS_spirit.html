@@ -246,7 +246,7 @@ function drawTrail(){
   trail.forEach(p=>{
     if(p.life<0)return;
 
-    const r=p.life*40+16;        // life=1→48px, life=0→8px
+    const r=p.life*26+46;        // life=1→48px, life=0→8px
     const a=p.life*0.05;        // life=1→0.05, life=0→0
     const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,r);
     g.addColorStop(0,`rgba(201,149,42,${a})`);
