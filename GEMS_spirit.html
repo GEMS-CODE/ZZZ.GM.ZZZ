@@ -239,14 +239,14 @@ function updateTrail(){
   if(Math.hypot(fairy.vx,fairy.vy)>0.2){
     trail.push({x:fairy.x,y:fairy.y,life:1});
   }
-  if(trail.length>36)trail.shift();
+  if(trail.length>26)trail.shift();
   trail.forEach(p=>p.life-=0.006);
 }
 function drawTrail(){
   trail.forEach(p=>{
     if(p.life<0)return;
 
-    const r=p.life*38+8;        // life=1→48px, life=0→8px
+    const r=p.life*46+8;        // life=1→48px, life=0→8px
     const a=p.life*0.05;        // life=1→0.05, life=0→0
     const g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,r);
     g.addColorStop(0,`rgba(201,149,42,${a})`);
