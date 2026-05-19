@@ -103,8 +103,8 @@ function makeNote(){
     x:fairy.x+Math.cos(angle)*r,
     y:fairy.y+Math.sin(angle)*r,
     vx:rnd(-0.4,0.4),
-    vy:rnd(-0.3,-0.06), 
-    sz:rnd(12,18),
+    vy:rnd(-0.15,-0.06), 
+    sz:rnd(4,14),
     alpha:0,
     life:0,
     lifeSpd:rnd(0.00015,0.0003),
@@ -157,7 +157,7 @@ function drawNotes(){
 
 function makeStar(){
   const angle=rnd(0,Math.PI*2);
-  const r=rnd(40,180);
+  const r=rnd(20,90);
   return {
     x:fairy.x+Math.cos(angle)*r,
     y:fairy.y+Math.sin(angle)*r,
@@ -166,7 +166,7 @@ function makeStar(){
     sz:rnd(6,10),
   
     alphaPeak:rnd(0.25,0.6),
-    alphaSpd:rnd(0.001,0.003), 
+    alphaSpd:rnd(0.0006,0.002), 
     alphaPh:rnd(0,Math.PI*2),
 
     life:rnd(0,1),
